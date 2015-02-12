@@ -1,0 +1,253 @@
+/**
+ * Handpicked from https://github.com/mattharrison/epub-css-starter-kit/blob/master/css/base.css
+ */
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+div.cover {
+  text-align: center;
+  page-break-after: always;
+  padding: 0;
+  margin: 0;
+}
+.cover-img {
+  height: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+a, a:hover, a:link, a:active, a:visited {
+  color: #158ed3;
+  text-decoration: none;
+  border-bottom-style: dotted;
+  border-bottom-width: 1px;
+}
+a.unstyled {
+  color: inherit;
+  border: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  hyphens: none !important;
+  -moz-hyphens: none !important;
+  -webkit-hyphens: none !important;
+  adobe-hyphenate: none !important;
+  page-break-after: avoid;
+  page-break-inside: avoid;
+  text-indent: 0;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+p {
+  font-family: "Palatino", "Times New Roman", Caecilia, serif;
+  -webkit-hyphens: auto;
+  -moz-hyphens: auto;
+  hyphens: auto;
+  hyphenate-after: 3;
+  hyphenate-before: 3;
+  hyphenate-lines: 2;
+  -webkit-hyphenate-after: 3;
+  -webkit-hyphenate-before: 3;
+  -webkit-hyphenate-lines: 2;
+  line-height: 1.5;
+  margin: 0;
+  text-indent: 1em;
+  orphans: 2;
+  widows: 2;
+}
+p.no-indent {
+  text-indent: 0;
+  margin-top: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  margin-right: 0;
+}
+
+ul, ol, dl {
+  text-align: left;
+  margin-top: 1em;
+  margin-left: 0;
+  margin-bottom: 1em;
+  margin-right: 0;
+}
+
+li {
+  line-height: 1.5em;
+  orphans: 2;
+  widows: 2;
+  text-indent: 0;
+  margin: 0;
+}
+li p {
+  text-indent: 0;
+}
+
+blockquote {
+  margin-left: 1em;
+  margin-right: 1em;
+  line-height: 1.5em;
+}
+blockquote p {
+  text-indent: 0;
+}
+
+p img {
+  border-radius: 0;
+  border: none;
+}
+
+table {
+  width: 100%;
+  page-break-inside: avoid;
+  border: 1px;
+  border-collapse: collapse;
+  border-spacing: 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+table.tb-small {
+  width: auto;
+}
+
+table p,
+table ol,
+table ul {
+  margin: 0;
+  padding: 0;
+  text-indent: 0;
+}
+
+th {
+  text-align: center;
+  padding: 5px;
+  vertical-align: baseline;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+td {
+  font-size: 0.85em;
+  hyphens: none;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  padding: 5px;
+  page-break-inside: avoid;
+  text-align: left;
+  text-indent: 0;
+  vertical-align: baseline;
+}
+
+sup {
+  vertical-align: super;
+  font-size: 0.5em;
+  line-height: 0.5em;
+}
+
+sub {
+  vertical-align: sub;
+  font-size: 0.5em;
+  line-height: 0.5em;
+}
+
+/**
+ * TEMPLATE DEFAULT
+ */
+.book-title {
+  text-align: center;
+  font-size: 3.5em;
+  line-height: 1.3;
+  margin-top: 2em;
+}
+.book-subtitle {
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.3;
+}
+.book-author {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.3;
+  margin-top: 10em;
+  font-family: Helvetica, Arial, sans-serif;
+}
+.chapter-title {
+  text-align: center;
+  font-size: 2.5em;
+  line-height: 1.3;
+  margin-top: 2em;
+  margin-bottom: 0;
+}
+.chapter-subtitle {
+  text-align: center;
+  font-size: 1.5em;
+  line-height: 1.3;
+  margin-top: 0.5em;
+  margin-bottom: 0;
+}
+p.first {
+  margin-top: 3em;
+}
+.copyright {
+  margin-top: 5em;
+  text-align: center;
+}
+p.copy-text {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 0.8em;
+  line-height: 1.3;
+  margin-top: 1em;
+  text-align: center;
+  text-indent: 0;
+}
+.html-toc {
+  margin-top: 3em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+.html-toc a {
+  border: 0;
+}
+.html-toc ol,
+.html-toc li {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.html-toc ol ol {
+  margin-left: 1em;
+}
+
+
+
+/**
+ * UTILS
+ */
+.group {
+  page-break-inside: avoid;
+}
+
+.page-break-before {
+  page-break-before: always;
+}
+
+.page-break-after {
+  page-break-after: always;
+}
+
+
+
+
+
+/*
+@media amzn-kf8 {}
+
+@media amzn-mobi {
+  img {
+    width: 100%;
+  }
+}
+*/

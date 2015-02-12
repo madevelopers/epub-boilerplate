@@ -9,7 +9,7 @@ charset = utf-8
 trim_trailing_whitespace = true
 insert_final_newline = true
 
-[**.{css,feature,json,html,htm,sh,xhtml,xml,xsl,xspec,yml}]
+[**.{css,feature,json,html,htm,ncx,opf,sh,xhtml,xml,xsl,xspec,yml}]
 indent_size = 2
 
 [**.{cmd,bat,ps1}]

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" prefix="rendition: http://www.idpf.org/vocab/rendition/# ibooks: http://vocabulary.itunes.apple.com/rdf/ibooks/vocabularyextensions-1.0/" unique-identifier="book_id" version="3.0">
+  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
+
+    <!-- eISBN is a 13-digit ISBN without hyphens -->
+    <dc:identifier id="book_id">urn:isbn:{{eISBN}}</dc:identifier>
+    <meta refines="#book_id" property="identifier-type" scheme="onix:codelist5">15</meta>
+
+    <dc:title id="t1">{{Book Title}}</dc:title>
+    <meta refines="#t1" property="title-type">main</meta>
+    <meta refines="#t1" property="display-seq">1</meta>
+
+    <!--
+      Uncomment block below if book has a subtitle.
+      You can also use the extended title-type should you wish to combine both.
+      Check http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-opf-dctitle for more details.
+    -->
+    <!--
+    <dc:title id="t2">{{Book Subtitle}}</dc:title>
+    <meta refines="#t2" property="title-type">subtitle</meta>
+    <meta refines="#t2" property="display-seq">2</meta>
+    -->
+
+    <dc:language>en-US</dc:language>
+    <meta property="dcterms:modified">2015-12-30T00:00:00Z</meta>
+
+
+    <!--
+      All elements below are considered optional but essential.
+      =========================================================
+
+      Additional description for [DCMES] elements can be found here: http://dublincore.org/documents/dces/
+    -->
+
+    <!--
+      Creator is usually the author of the publication.
+      Check http://www.idpf.org/epub/30/spec/epub30-publications.html#sec-opf-dccreator for more details.
+    -->
+    <dc:creator id="creator01">{{AU_firstname}} {{AU_lastname}}</dc:creator>
+    <meta property="role" refines="#creator01" scheme="marc:relators">aut</meta>
+    <meta property="file-as" refines="#creator01">{{AU_lastname}}, {{AU_firstname}}</meta>
+    <meta property="display-seq" refines="#creator01">1</meta>
+
+    <!-- The date of publication of the EPUB. -->
+    <dc:date id="published">2015-12-30</dc:date>
+
+    <!--
+      Uncomment line below if ebook is derived from a print version.
+    -->
+    <!--
+    <dc:source id="src_id">urn:isbn:{{ISBN}}</dc:source>
+    <meta property="identifier-type" refines="#src_id" scheme="onix:codelist5">15</meta>
+    -->
+
+    <!-- <dc:publisher>Publisher Name</dc:publisher> -->
+
+    <!-- <dc:description>Short Description</dc:description> -->
+
+
+    <!--
+      The publications cover, the value of the content attribute must match
+      with the manifest item id of the cover image.
+    -->
+    <meta content="cover-image" name="cover"/>
+
+    <!--
+      Versioning specific to ibooks. Google iBooksAssetGuide.pdf and download the PDF.
+    -->
+    <!-- <meta property="ibooks:version">1.0.0</meta> -->
+  </metadata>
+
+  <manifest>
+    <item href="nav.xhtml" id="nav" media-type="application/xhtml+xml" properties="nav"/>
+    <item href="styles/stylesheet.css" id="stylesheet" media-type="text/css"/>
+    <item href="xhtml/cover.xhtml" id="cover" media-type="application/xhtml+xml"/>
+    <item href="xhtml/title.xhtml" id="title" media-type="application/xhtml+xml"/>
+    <item href="xhtml/copyright.xhtml" id="copyright" media-type="application/xhtml+xml"/>
+    <item href="xhtml/toc.xhtml" id="html-toc" media-type="application/xhtml+xml"/>
+    <item href="xhtml/frontmatter001.xhtml" id="frontmatter001" media-type="application/xhtml+xml"/>
+    <item href="xhtml/chapter001.xhtml" id="chapter001" media-type="application/xhtml+xml"/>
+    <item href="xhtml/backmatter001.xhtml" id="backmatter001" media-type="application/xhtml+xml"/>
+
+    <item href="images/cover.jpg" id="cover-image" media-type="image/jpeg" properties="cover-image"/>
+  </manifest>
+
+  <spine>
+    <itemref idref="cover" linear="no"/>
+    <itemref idref="title"/>
+    <itemref idref="copyright"/>
+    <itemref idref="html-toc"/>
+    <itemref idref="frontmatter001"/>
+    <itemref idref="chapter001"/>
+    <itemref idref="backmatter001"/>
+  </spine>
+</package>
