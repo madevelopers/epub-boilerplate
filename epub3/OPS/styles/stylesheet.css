@@ -1,10 +1,7 @@
-/**
- * Handpicked from https://github.com/mattharrison/epub-css-starter-kit/blob/master/css/base.css
- */
-
 body {
   margin: 0;
   padding: 0;
+  line-height: 1.4;
 }
 
 div.cover {
@@ -23,136 +20,119 @@ div.cover {
 
 a, a:hover, a:link, a:active, a:visited {
   color: #158ed3;
-  text-decoration: none;
-  border-bottom-style: dotted;
-  border-bottom-width: 1px;
 }
 a.unstyled {
   color: inherit;
-  border: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  hyphens: none !important;
   -moz-hyphens: none !important;
   -webkit-hyphens: none !important;
   adobe-hyphenate: none !important;
+  hyphens: none !important;
   page-break-after: avoid;
   page-break-inside: avoid;
   text-indent: 0;
-  font-family: Helvetica, Arial, sans-serif;
+  margin-top: 1em;
+  margin-bottom: 0;
 }
 
 p {
-  font-family: "Palatino", "Times New Roman", Caecilia, serif;
   -webkit-hyphens: auto;
   -moz-hyphens: auto;
   hyphens: auto;
-  hyphenate-after: 3;
-  hyphenate-before: 3;
-  hyphenate-lines: 2;
   -webkit-hyphenate-after: 3;
   -webkit-hyphenate-before: 3;
   -webkit-hyphenate-lines: 2;
-  line-height: 1.5;
-  margin: 0;
-  text-indent: 1em;
+  hyphenate-after: 3;
+  hyphenate-before: 3;
+  hyphenate-lines: 2;
+  margin: 1em 0 0 0;
+  text-indent: 0;
   orphans: 2;
   widows: 2;
 }
-p.no-indent {
-  text-indent: 0;
-  margin-top: 1em;
-  margin-left: 0;
-  margin-bottom: 1em;
-  margin-right: 0;
+p.indent {
+  text-indent: 1.5em;
+  margin-top: 0;
 }
 
-ul, ol, dl {
-  text-align: left;
-  margin-top: 1em;
-  margin-left: 0;
-  margin-bottom: 1em;
-  margin-right: 0;
+ul, ol {
+  margin: 1em 0 0 0;
+  padding: 0 0 0 2em;
 }
 
 li {
-  line-height: 1.5em;
   orphans: 2;
   widows: 2;
   text-indent: 0;
   margin: 0;
+  padding: 0;
 }
 li p {
   text-indent: 0;
 }
 
 blockquote {
-  margin-left: 1em;
-  margin-right: 1em;
-  line-height: 1.5em;
-}
-blockquote p {
-  text-indent: 0;
+  margin: 1em 1.5em 0 1.5em;
+  /* right margin doesn't work on DX */
 }
 
-p img {
-  border-radius: 0;
-  border: none;
-}
-
-table {
-  width: 100%;
-  page-break-inside: avoid;
-  border: 1px;
-  border-collapse: collapse;
-  border-spacing: 0;
-  margin-top: 1em;
-  margin-bottom: 1em;
-}
-table.tb-small {
-  width: auto;
-}
-
-table p,
-table ol,
-table ul {
-  margin: 0;
-  padding: 0;
-  text-indent: 0;
-}
-
-th {
+.table-wrapper {
   text-align: center;
-  padding: 5px;
-  vertical-align: baseline;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
+  margin-top: 1em;
 }
-
-td {
+table {
+  border-collapse: collapse;
+  border-width: 1px;
+  border-color: #444444;  /* #444444 works on nightmode */
+  border-style: solid;
+  border-spacing: 0;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 100%;
   font-size: 0.85em;
-  hyphens: none;
-  -moz-hyphens: none;
-  -webkit-hyphens: none;
-  padding: 5px;
   page-break-inside: avoid;
+}
+td {
+  border-width: 1px;
+  border-color: #444444;
+  border-style: solid;
+  padding: 5px;
   text-align: left;
   text-indent: 0;
   vertical-align: baseline;
+  -moz-hyphens: none;
+  -webkit-hyphens: none;
+  hyphens: none;
+  page-break-inside: avoid;
+}
+th {
+  text-align: center;
+  vertical-align: baseline;
+  padding: 5px;
+
+  /* Optional coloring */
+  background: #444444;
+  color: #dddddd;
+}
+table.no-border,
+table.no-border td,
+table.no-border th {
+  border: 0;
 }
 
 sup {
   vertical-align: super;
-  font-size: 0.5em;
-  line-height: 0.5em;
 }
-
 sub {
   vertical-align: sub;
-  font-size: 0.5em;
-  line-height: 0.5em;
 }
+
+
+
+
+
 
 /**
  * TEMPLATE DEFAULT
